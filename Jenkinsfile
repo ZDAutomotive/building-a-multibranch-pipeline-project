@@ -19,7 +19,7 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
                 sh 'echo "${isRebuild}"'
                 sh '''
-                    if [ ${isRebuild} ]; then
+                    if ${isRebuild} ; then
 			        echo "is rebuild"
                     fi
                    '''
