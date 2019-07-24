@@ -17,7 +17,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
-                sh 'echo "Fail!"; exit 1'
                 sh 'echo "${isRebuild}"'
                 sh '''
                     if [ ${isRebuild} ]; then
